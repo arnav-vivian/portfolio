@@ -6,6 +6,9 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiTwotoneMail,
+  AiOutlineMail,
+  AiFillMail,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -24,16 +27,16 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> C++ and Javascript . </b>
+                <b className="purple"> C++, C, Javascript, Python, Go . </b>
               </i>
               <br />
               <br />
               My field of Interest's are solving new &nbsp;
               <i>
                 <b className="purple">problems based on Data Structures and Alogorithms </b> and
-                also in areas related to{" "}
+                aspiring to learning technologies related to{" "}
                 <b className="purple">
-                  web 3.
+                  Web 2 .
                 </b>
               </i>
               <br />
@@ -48,7 +51,7 @@ function Home2() {
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> React.js and Next.js</b>
+                <b className="purple"> React.js </b>
               </i>
             </p>
           </Col>
@@ -77,17 +80,18 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
+                  href="mailto:arnavsingh6444@gmail.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour  home-social-icons"
+                  className="icon-colour home-social-icons"
                 >
-                  <AiOutlineTwitter />
+                  <AiFillMail />
                 </a>
+
               </li>
               <li className="social-icons">
                 <a
-                  href="www.linkedin.com/in/arnav-singh-b72a991b4"
+                  href="https://www.linkedin.com/in/arnav6444/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -97,7 +101,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/"
+                  href="/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"

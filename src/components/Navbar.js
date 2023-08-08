@@ -2,23 +2,41 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
+//import pdf from "../../Assets/Projects/ARNAV_SINGH_Resume_27-11-2022-16-21-15.pdf";
+import myResume from "../Assets/myResume.pdf";
+
 import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineMail,
 } from "react-icons/ai";
 
-import { CgFileDocument } from "react-icons/cg";
+//import ResumeNew from "./Resume/ResumeNew";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    //fetch('myResume.pdf').then(response => {
+    // response.blob().then(blob => {
+    //     // Creating new object of PDF file
+    //     const fileURL = window.URL.createObjectURL(blob);
+    //     // Setting various property values
+    //     let alink = document.createElement('a');
+    //     alink.href = fileURL;
+    //     alink.download = 'myResume.pdf';
+    //     alink.click();
+    //     })
+    // })
+  }
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -38,9 +56,9 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
-        </Navbar.Brand>
+        {/* <Navbar.Brand href="/" className="d-flex">
+          <img src={logo} className="img-fluid logo" alt="brand" />
+        </Navbar.Brand> */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -84,23 +102,14 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
+                as="a"
+                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=arnavsingh6444@gmail.com" target="_blank"
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <AiOutlineMail style={{ marginBottom: "2px" }} /> Gmail
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                href="/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item>
+
 
             <Nav.Item className="fork-btn">
               <Button
