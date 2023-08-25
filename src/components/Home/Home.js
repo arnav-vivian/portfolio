@@ -4,6 +4,8 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { CgGitFork, CgFileDocument } from "react-icons/cg";
+import Resume from "../../Assets/Resume/resume.pdf";
 
 function Home() {
   return (
@@ -38,7 +40,19 @@ function Home() {
                 style={{ maxHeight: "450px" }}
               />
             </Col>
+
           </Row>
+          <button className="arnav"
+            variant="primary">
+            <a
+              target="_blank"
+              href={Resume}
+              rel="noreferrer"
+              className="resumePDF"
+            >
+              <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+            </a>
+          </button>
         </Container>
       </Container>
       <Home2 />

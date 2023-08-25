@@ -2,15 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-
-import resume from "../../Assets/resume.pdf"
+import pdf from "../../Assets/Resume/resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-//import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-// // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-// const resumeLink =
-//   "https://drive.google.com/file/d/1HKAy9_r-Tukt8QiO510LBYtf_JSPUb-2/view?usp=sharing";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -26,7 +22,7 @@ function ResumeNew() {
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={resume}
+            href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -36,15 +32,15 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume">
-          {/* <Document file={pdf} className="d-flex justify-content-center">
+          <Document file={pdf} className="d-flex justify-content-center">
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document> */}
+          </Document>
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-             href={resume}
+            href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -58,49 +54,3 @@ function ResumeNew() {
 }
 
 export default ResumeNew;
-
-// import React from "react";
-// import pdf from "../../Assets/Projects/ARNAV_SINGH_Resume_27-11-2022-16-21-15.pdf"
-//  import { AiOutlineDownload } from "react-icons/ai";
-//  import Button from "react-bootstrap/Button";
-//  import { Container, Row } from "react-bootstrap";
-// import Particle from "../Particle";
-// function downloadresume(){
-//     return (
-//           <div>
-//             <Container fluid className="resume-section">
-//               <Particle />
-//               <Row style={{ justifyContent: "center", position: "relative" }}>
-//                 <Button
-//                   variant="primary"
-//                   href={pdf}
-//                   target="_blank"
-//                   style={{ maxWidth: "250px" }}
-//                 >
-//                   <AiOutlineDownload />
-//                   &nbsp;Download CV
-//                 </Button>
-//               </Row>
-      
-//               <Row className="resume">
-              
-//               </Row>
-      
-//               <Row style={{ justifyContent: "center", position: "relative" }}>
-//                 <Button
-//                   variant="primary"
-//                    href={pdf}
-//                   target="_blank"
-//                   style={{ maxWidth: "250px" }}
-//                 >
-//                   <AiOutlineDownload />
-//                   &nbsp;Download CV
-//                 </Button>
-//               </Row>
-//             </Container>
-//           </div>
-//   )
-// }
-
-// export default downloadresume;
- 
